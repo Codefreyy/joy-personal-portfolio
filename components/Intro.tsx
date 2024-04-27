@@ -1,7 +1,11 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { animate, motion } from "framer-motion"
+import { BsArrowRight, BsLinkedin } from "react-icons/bs"
+import { HiDownload } from "react-icons/hi"
+import { FaGithubSquare } from "react-icons/fa"
+import Link from "next/link"
 
 export function Intro() {
   return (
@@ -50,6 +54,43 @@ export function Intro() {
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
+
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <Link
+          href="#contact"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+        >
+          Contact me here
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+        <a
+          href="/Joy-fullstack.pdf"
+          target="_blank"
+          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+        >
+          Download CV
+          <HiDownload />
+        </a>
+        <a
+          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.linkedin.com/in/joy-yujiepeng/"
+          target="_blank"
+        >
+          <BsLinkedin />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://github.com/Codefreyy"
+          target="_blank"
+        >
+          <FaGithubSquare />
+        </a>
+      </motion.div>
     </section>
   )
 }
