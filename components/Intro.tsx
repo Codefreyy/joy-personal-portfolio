@@ -12,14 +12,13 @@ export function Intro() {
     <section className="mb-28 max-w-[50rem] text-center sm:mb-0">
       <div className="flex items-center justify-center">
         <div className="relative">
-          {/* todo: add my image later */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+              src="/profile.png"
               alt="developer-image"
               width="192"
               height="192"
