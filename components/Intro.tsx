@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { animate, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { BsArrowRight, BsLinkedin } from "react-icons/bs"
 import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa"
@@ -31,7 +31,8 @@ export function Intro() {
           <motion.span
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="absolute text-4xl bottom-0 right-0"
+            whileHover={{ scale: 1.25, rotate: 15 }}
+            className="absolute text-4xl bottom-0 right-0 hover:rotate-2"
             transition={{
               type: "spring",
               duration: 0.7,
@@ -56,7 +57,7 @@ export function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center  gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -65,7 +66,7 @@ export function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 px-4 py-2 text-sm sm:text-lg text-white sm:px-7 sm:py-3 flex flex-nowrap items-center gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 px-4 py-2 text-sm sm:text-lg text-white sm:px-7 sm:py-3 flex items-center gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
