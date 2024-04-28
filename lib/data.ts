@@ -75,7 +75,7 @@ export const projectsData = [
     },
     {
         title: "Game Hub",
-        description: "Responsive game grid Search and filter; React Query for data handling; Implement form validation using Zod Zustand for state management; React Router for navigation; Implement infinite scrolling",
+        description: "Responsive game grid Search and filter, infinite scrolling using react query, form validation using Zod, Zustand for state management.",
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],
         imageUrl: gameHubImage,
     },
