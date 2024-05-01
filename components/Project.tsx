@@ -1,9 +1,9 @@
 "use client"
 
-import { projectsData } from "@/lib/data"
 import { useRef } from "react"
-import { motion, useTransform, useScroll } from "framer-motion"
+import { projectsData } from "@/lib/data"
 import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 type ProjectProps = (typeof projectsData)[number]
 
@@ -13,21 +13,20 @@ export default function Project({
   tags,
   imageUrl,
 }: ProjectProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   })
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1])
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
 
   return (
     <motion.div
       ref={ref}
       style={{
-        scale: scaleProgress,
-        opacity: opacityProgress,
+        scale: scaleProgess,
+        opacity: opacityProgess,
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
@@ -54,17 +53,17 @@ export default function Project({
           alt="Project I worked on"
           quality={95}
           className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-    transition 
-    group-hover:scale-[1.04]
-    group-hover:-translate-x-3
-    group-hover:translate-y-3
-    group-hover:-rotate-2
+        transition 
+        group-hover:scale-[1.04]
+        group-hover:-translate-x-3
+        group-hover:translate-y-3
+        group-hover:-rotate-2
 
-    group-even:group-hover:translate-x-3
-    group-even:group-hover:translate-y-3
-    group-even:group-hover:rotate-2
+        group-even:group-hover:translate-x-3
+        group-even:group-hover:translate-y-3
+        group-even:group-hover:rotate-2
 
-    group-even:right-[initial] group-even:-left-40"
+        group-even:right-[initial] group-even:-left-40"
         />
       </section>
     </motion.div>
