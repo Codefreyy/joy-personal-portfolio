@@ -94,9 +94,11 @@ export const skillsData = [
     "JavaScript",
     "TypeScript",
     "React",
-    "Next.js",
-    "Node.js",
-    "Express.js",
+    "Next",
+    "Vue2",
+    "Vue3",
+    "Node",
+    "Express",
     "Git",
     "Tailwind",
     "Chakra UI",
@@ -104,5 +106,6 @@ export const skillsData = [
     "Prisma",
     "MongoDB",
     "Framer Motion",
-    "d3.js",
+    "d3",
+    "UI/UX"
 ] as const;
