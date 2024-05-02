@@ -7,6 +7,7 @@ import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
 import { useSectionInView } from "@/lib/hooks"
+import { TypeAnimation } from "react-type-animation"
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5)
@@ -27,11 +28,11 @@ export default function Intro() {
             <Image
               src="/profile.png"
               alt="developer-image"
-              width="192"
-              height="192"
+              width="250"
+              height="250"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-28 w-28 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
           <motion.span
@@ -55,9 +56,33 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Joy.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with{" "}
-        <span className="font-bold">2 years</span> of experience. I enjoy
+        <span className="font-bold">Hello, I'm</span>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
+          <h1
+            id="name"
+            className=" text-center  text-3xl  sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold"
+          >
+            <TypeAnimation
+              sequence={[
+                "Joy",
+                1000,
+                "Frontend Developer",
+                1000,
+                "Full Stack Developer",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </h1>
+        </motion.div>
+        with <span className="font-bold">2 years</span> of experience. I enjoy
         building <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>

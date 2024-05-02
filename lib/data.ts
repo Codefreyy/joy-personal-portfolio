@@ -40,7 +40,14 @@ export const experiencesData = [
     },
     {
         title: "Frontend Intern",
-        location: "NIO | Wuhan, China",
+        location: React.createElement("span", {},
+            React.createElement("a", {
+                href: "https://www.nio.com/",
+                style: { textDecoration: 'underline' },
+                target: "_blank"
+            }, "NIO Inc."),
+            " Wuhan, China"
+        ),
         description:
             "Developed NIO's third-generation station list and detail pages using Vue3, TypeScript, and Baidu Maps API. Implemented role-based access control for the Task Wizard page, enhancing system security. Collaborated effectively within a Jira-managed environment, utilizing Jenkins for deployment processes.",
         icon: React.createElement(FaVuejs),
