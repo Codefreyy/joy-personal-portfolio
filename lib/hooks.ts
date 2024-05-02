@@ -14,7 +14,6 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
     useEffect(() => {
 
         if (inView && Date.now() - timeOfLastClick > 1000) {
-            console.log(inView, sectionName, Date.now() - timeOfLastClick)
             setActiveSection(sectionName);
         }
     }, [inView, setActiveSection, timeOfLastClick, sectionName]);
