@@ -44,12 +44,11 @@ export default function Contact() {
             toast.error(error)
             return
           }
-          console.log(data, error)
           toast.success("Email sent successfully!")
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-90 dark:focus:bg-opacity-100 transition-all dark:outline-none outline-black"
+          className="h-14 px-4 rounded-lg border dark:bg-white dark:bg-opacity-90 dark:focus:bg-opacity-100 transition-all outline-none"
           name="senderEmail"
           type="email"
           required

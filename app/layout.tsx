@@ -31,8 +31,8 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
+            <ThemeSwitch />
           </ActionSectionContextProvider>
-          <ThemeSwitch />
         </ThemeContextProvider>
       </body>
     </html>

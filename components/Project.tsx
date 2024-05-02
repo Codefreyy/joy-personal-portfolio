@@ -6,7 +6,7 @@ import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
-import { HiMiniLink } from "react-icons/hi2"
+import { FaLink } from "react-icons/fa"
 
 type ProjectProps = (typeof projectsData)[number]
 
@@ -46,8 +46,8 @@ export default function Project({
             >
               <FaGithubSquare className="w-5 h-5" />
             </Link>
-            <Link href={demoUrl} target="_blank"  className="hover:scale-[1.25]">
-              <HiMiniLink className="w-5 h-5" />
+            <Link href={demoUrl} target="_blank" className="hover:scale-[1.25]">
+              <FaLink className="w-4 h-4" />
             </Link>
           </div>
 
