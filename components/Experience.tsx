@@ -7,12 +7,13 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import { experiencesData } from "@/lib/data"
-import { useSectionInView } from "@/lib/hooks"
 import SectionHeading from "./SectionHeading"
 import { motion } from "framer-motion"
+import { useTheme } from "@/context/theme-context"
+import { ExperienceLabel } from "./ExperienceLabel"
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience")
+  const { theme } = useTheme()
   const variants = {
     left: {
       hidden: { x: -200, opacity: 0 },
@@ -25,9 +26,10 @@ export default function Experience() {
   }
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section className="sm:mb-40 relative">
+      <ExperienceLabel />
       <SectionHeading>My experience</SectionHeading>
-      <VerticalTimeline lineColor="#e9e9ea">
+      <VerticalTimeline lineColor={theme == "light" ? "#e9e9ea" : "#3b3d4f"}>
         {experiencesData.map((item, index) => (
           <motion.div
             key={index}
@@ -41,19 +43,24 @@ export default function Experience() {
               position={index % 2 === 0 ? "left" : "right"}
               visible={true}
               contentStyle={{
-                background: "#f4f5f7",
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid #9ca3af",
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background: "white",
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
                 fontSize: "1.5rem",
               }}
             >

@@ -10,7 +10,7 @@ import { useSectionInView } from "@/lib/hooks"
 import { TypeAnimation } from "react-type-animation"
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.5)
+  const { ref } = useSectionInView("Home", 0.2)
 
   return (
     <section
@@ -56,7 +56,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm</span>
+        <span className="font-bold">Hello, I&apos;m</span>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
