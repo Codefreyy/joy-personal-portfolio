@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { IoIosArrowDown } from "react-icons/io"
 
-export function SectionDivider() {
+export default function SectionDivider() {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}

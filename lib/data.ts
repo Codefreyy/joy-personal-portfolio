@@ -1,6 +1,6 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import { FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import rubicGameImage from "@/public/2048-game.png";
 import gameHubImage from "@/public/game-hub.png";
@@ -31,24 +31,24 @@ export const links = [
 
 export const experiencesData = [
     {
-        title: "MS in Computing and IT",
+        title: "MSc in Computing and IT",
         location: "University of St Andrews, UK",
         description:
-            "Achieved a Master's degree in Computing and IT, specializing in advanced computing technologies, with a focus on both theoretical and practical applications.",
+            "Achieved a Master's degree in Computing and IT, acquiring in-depth knowledge in areas such as Human Computer Interaction, Computer Communication Systems, and Information Security. Developed strong capabilities in computational thinking, user-centred design, and data visualisation, preparing for effective application in technology-driven environments",
         icon: React.createElement(LuGraduationCap),
         date: "2023 Sep - 2024 May",
     },
     {
         title: "Frontend Intern",
-        location: "Wuhan, China",
+        location: "NIO | Wuhan, China",
         description:
             "Developed NIO's third-generation station list and detail pages using Vue3, TypeScript, and Baidu Maps API. Implemented role-based access control for the Task Wizard page, enhancing system security. Collaborated effectively within a Jira-managed environment, utilizing Jenkins for deployment processes.",
-        icon: React.createElement(CgWorkAlt),
+        icon: React.createElement(FaVuejs),
         date: "2022 Aug - 2022 Dec",
     },
     {
-        title: "Frontend Developer",
-        location: "Wuhan, China",
+        title: "Frontend Assistant",
+        location: "Wuhan University | Wuhan, China",
         description:
             "Developed and maintained Finknow, a Financial Knowledge Graph Query and Analysis Platform using umi (React framework) and Ant Design Pro. Utilized graphin, a React toolkit for graph analysis based on G6, to develop an Equity Network Penetration Graph, enhancing data visualization capabilities.",
         icon: React.createElement(FaReact),
