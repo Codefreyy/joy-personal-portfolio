@@ -8,9 +8,11 @@ import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
 import { useSectionInView } from "@/lib/hooks"
 import { TypeAnimation } from "react-type-animation"
+import { useActiveSectionContext } from "@/context/action-section-context"
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.2)
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
 
   return (
     <section
@@ -97,6 +99,10 @@ export default function Intro() {
       >
         <Link
           href="#contact"
+          onClick={() => {
+            setActiveSection("Contact")
+            setTimeOfLastClick(Date.now())
+          }}
           className="group bg-gray-900 px-4 py-2 text-sm sm:text-lg text-white sm:px-7 sm:py-3 flex items-center gap-2  rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
         >
           Contact me here

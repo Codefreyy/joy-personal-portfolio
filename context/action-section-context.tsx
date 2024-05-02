@@ -1,6 +1,6 @@
 "use client"
 
-import {
+import React, {
   useState,
   createContext,
   SetStateAction,
@@ -17,7 +17,9 @@ type ActionSectionContextProviderProps = {
 type ActionSectionContextType = {
   activeSection: SectionName
   setActiveSection: Dispatch<
-    SetStateAction<"Home" | "About" | "Projects" | "Skills" | "Experience">
+    SetStateAction<
+      "Home" | "About" | "Projects" | "Skills" | "Experience" | "Contact"
+    >
   >
   timeOfLastClick: number
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>

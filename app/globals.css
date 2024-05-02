@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.borderBlack {
+  @apply border border-black/10;
+}
