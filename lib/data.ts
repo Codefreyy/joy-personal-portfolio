@@ -79,12 +79,17 @@ export const projectsData = [
             "A typing speed test app. It shows words per minute, accuracy and time taken to complete the test.",
         tags: ["React", "TypeScript", "Tailwind", 'Framer Motion'],
         imageUrl: typingSpeedImage,
+        projectUrl: 'https://github.com/Codefreyy/typing-speed-game',
+        demoUrl: 'https://typing-speed-game-smoky.vercel.app/'
     },
     {
         title: "Game Hub",
         description: "Responsive game grid Search and filter, infinite scrolling using react query, form validation using Zod, Zustand for state management.",
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],
         imageUrl: gameHubImage,
+        projectUrl: 'https://github.com/Codefreyy/New-Game-hub',
+        demoUrl: 'https://new-game-hub.vercel.app/'
+
     },
     {
         title: "2048 Game",
@@ -92,6 +97,8 @@ export const projectsData = [
             "The 2048 game is a simple, fun, and addictive number puzzle game. ",
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: rubicGameImage,
+        projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
+        demoUrl: 'https://vanilla-js-game-2048.vercel.app/'
     },
 ] as const;
 
