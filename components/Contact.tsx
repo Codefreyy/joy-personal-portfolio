@@ -8,11 +8,11 @@ import toast, { Toaster } from "react-hot-toast"
 import SubmitBtn from "./SubmitBtn"
 
 export default function Contact() {
-  const { ref } = useSectionInView("Contact")
+  // const { ref } = useSectionInView("Contact")
   return (
     <motion.section
       id="contact"
-      ref={ref}
+      // ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,

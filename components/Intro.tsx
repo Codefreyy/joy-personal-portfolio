@@ -97,7 +97,7 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
+        {/* <Link
           href="#contact"
           onClick={() => {
             setActiveSection("Contact")
@@ -107,7 +107,7 @@ export default function Intro() {
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-        </Link>
+        </Link> */}
         <a
           href="/Joy-fullstack.pdf"
           download={true}
