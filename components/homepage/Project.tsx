@@ -40,11 +40,11 @@ export default function Project({
       <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[25rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex gap-3 items-center">
-            <Link href={detailRoute}>
+            {/* <Link href={detailRoute}> */}
               <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
                 {title}
               </h3>
-            </Link>
+            {/* </Link> */}
 
             <Link
               href={projectUrl}
@@ -61,7 +61,7 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2">
+          <ul className="flex flex-wrap mt-auto gap-2"> 
             {tags.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -71,13 +71,13 @@ export default function Project({
               </li>
             ))}
           </ul>
-          <Link
+          {/* <Link
             href={detailRoute}
             className="group flex gap-2 items-center font-medium group-hover:text-pink dark:group-hover:text-yellow hover:underline mt-auto"
           >
             See Detail
             <IoIosArrowForward className="hidden group-hover:block" />
-          </Link>
+          </Link> */}
         </div>
 
         <Image
