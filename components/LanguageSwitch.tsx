@@ -2,15 +2,23 @@
 
 import { IoLanguageOutline } from "react-icons/io5"
 import { useLocale } from "next-intl"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 export default function LanguageSwitch() {
   const localActive = useLocale()
   const router = useRouter()
+  const pathname = usePathname()
+
   const onChangeLanguage = (e: any) => {
     const nextLocale = localActive == "en" ? "zh" : "en"
-    router.replace(`/${nextLocale}`)
+
+    const replaceLangInPath = (newLang: string) => {
+      const newPath = pathname.replace(/^\/(en|zh)\//, `/${newLang}/`);
+      router.push(newPath);
+    }
+    replaceLangInPath(nextLocale)
   }
+
   return (
     <>
       <button
