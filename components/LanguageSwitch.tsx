@@ -13,9 +13,11 @@ export default function LanguageSwitch() {
     const nextLocale = localActive == "en" ? "zh" : "en"
 
     const replaceLangInPath = (newLang: string) => {
-      const newPath = pathname.replace(/^\/(en|zh)\//, `/${newLang}/`)
-      router.push(newPath)
+      const newPath = pathname.replace(/^\/(en|zh)/, `/${newLang}/`)
+      console.log(pathname, newLang, newPath, 666) // /zh en /zh 666
+      router.replace(newPath)
     }
+
     replaceLangInPath(nextLocale)
   }
 
