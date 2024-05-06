@@ -6,11 +6,16 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import { experiencesData } from "@/lib/data"
+import {
+  experiencesData,
+  experiencesDataZn,
+  headerLanguageMap,
+} from "@/lib/data"
 import SectionHeading from "./SectionHeading"
 import { motion } from "framer-motion"
 import { useTheme } from "@/context/theme-context"
 import { ExperienceLabel } from "./ExperienceLabel"
+import { useLocale } from "next-intl"
 
 export default function Experience() {
   const { theme } = useTheme()
@@ -25,12 +30,22 @@ export default function Experience() {
     },
   }
 
+  const activeLocale = useLocale()
+
+  const experienceDataShown =
+    activeLocale == "zh" ? experiencesDataZn : experiencesData
+
   return (
     <section className="sm:mb-40 relative">
       <ExperienceLabel />
-      <SectionHeading>My experience</SectionHeading>
+      <SectionHeading>
+        {" "}
+        {activeLocale === "zh"
+          ? headerLanguageMap["Experience"]
+          : "My Experience"}
+      </SectionHeading>
       <VerticalTimeline lineColor={theme == "light" ? "#e9e9ea" : "#3b3d4f"}>
-        {experiencesData.map((item, index) => (
+        {experienceDataShown.map((item, index) => (
           <motion.div
             key={index}
             initial="hidden"

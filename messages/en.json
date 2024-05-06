@@ -1,0 +1,18 @@
+{
+    "IntroSection": {
+        "hello_im": "Hello, I'm",
+        "name": "Joy",
+        "short_intro": "with 2 years of experience. I enjoy building sites & apps. My focus is ",
+        "focus": "React (Next.js)",
+        "download_cv": "Download CV"
+    },
+    "SectionName": {
+        "about": "About me",
+        "experience": "Experience",
+        "projects": "Projects",
+        "skills": "Skills"
+    },
+    "AboutSection": {
+        "desc": "During my undergraduate studies at the School of Information Management at Wuhan University, I learned computer fundamentals, database principles and practice, and Python courses, while delving into front-end development in my junior year. After interning at the Big Data Research Institute of Wuhan University and NIO, I became even more certain that this was the career path I wanted to pursue. Thus, I decided to pursue a master's degree in Computing and IT at the University of St Andrews in the UK. I thoroughly enjoy programming challenges, and working with my team to develop projects and solve complex problems brings me great satisfaction. I'm proficient in using technologies like React, Vue3, and Next.js, and have a deep understanding of TypeScript and HTML/CSS 💻.In my free time, I like learning new skills and working on fun projects 🛠️. I also run my own accounts on social media platforms like Bilibili and Xiaohongshu to share technical knowledge and learning resources 🌐. When I'm not at my computer, I enjoy cooking, watching movies, and working out 🍳🎥💪. Regular exercise, sleep, and diet are my secrets to staying energized 🌟."
+    }
+}

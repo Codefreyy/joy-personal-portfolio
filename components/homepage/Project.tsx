@@ -8,12 +8,15 @@ import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
 import { FaLink } from "react-icons/fa"
 import { IoIosArrowForward } from "react-icons/io"
+import { useLocale } from "next-intl"
 
 type ProjectProps = (typeof projectsData)[number]
 
 export default function Project({
   title,
   description,
+  desc_zh,
+  title_zh,
   tags,
   imageUrl,
   projectUrl,
@@ -27,6 +30,7 @@ export default function Project({
   })
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1])
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1])
+  const activeLocale = useLocale()
 
   return (
     <motion.div
@@ -41,9 +45,9 @@ export default function Project({
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex gap-3 items-center">
             {/* <Link href={detailRoute}> */}
-              <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
-                {title}
-              </h3>
+            <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
+              {activeLocale === "zh" ? title_zh : title}
+            </h3>
             {/* </Link> */}
 
             <Link
@@ -59,9 +63,9 @@ export default function Project({
           </div>
 
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
+            {activeLocale === "zh" ? desc_zh : description}
           </p>
-          <ul className="flex flex-wrap mt-auto gap-2"> 
+          <ul className="flex flex-wrap mt-auto gap-2">
             {tags.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"

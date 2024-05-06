@@ -18,6 +18,7 @@
     "eslint-config-next": "14.2.3",
     "framer-motion": "^11.1.7",
     "next": "14.2.3",
+    "next-intl": "^3.12.2",
     "postcss": "8.4.38",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -6,14 +6,17 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs"
 import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
+import { useLocale } from "next-intl"
 import { useSectionInView } from "@/lib/hooks"
 import { TypeAnimation } from "react-type-animation"
 import { useActiveSectionContext } from "@/context/action-section-context"
+import { useTranslations } from "next-intl"
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.2)
+  const activeLocale = useLocale()
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
-
+  const t = useTranslations("IntroSection")
   return (
     <section
       ref={ref}
@@ -58,7 +61,7 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m</span>
+        <span className="font-bold">{t("hello_im")}</span>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -71,7 +74,7 @@ export default function Intro() {
           >
             <TypeAnimation
               sequence={[
-                "Joy",
+                `${t("name")}`,
                 1000,
                 "Frontend Developer",
                 1000,
@@ -84,9 +87,10 @@ export default function Intro() {
             />
           </h1>
         </motion.div>
-        with <span className="font-bold">2 years</span> of experience. I enjoy
-        building <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>.
+        <p>{t("short_intro")}</p>
+        <span className={`${activeLocale == "en" ? "underline" : "italic"}`}>
+          {t("focus")}
+        </span>
       </motion.h1>
 
       <motion.div
@@ -113,7 +117,7 @@ export default function Intro() {
           download={true}
           className="group text-sm  px-4 py-2  bg-white sm:text-lg sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
         >
-          Download CV
+          {t("download_cv")}
           <HiDownload />
         </a>
         <a
