@@ -76,6 +76,8 @@ export const experiencesData = [
 
 ] as const;
 
+export type ProjectTags = typeof projectsData[number]["tags"];
+
 export const projectsData = [
     {
         title: "Typing Speed",
@@ -84,7 +86,8 @@ export const projectsData = [
         tags: ["React", "TypeScript", "Tailwind", 'Framer Motion'],
         imageUrl: typingSpeedImage,
         projectUrl: 'https://github.com/Codefreyy/typing-speed-game',
-        demoUrl: 'https://typing-speed-game-smoky.vercel.app/'
+        demoUrl: 'https://typing-speed-game-smoky.vercel.app/',
+        detailRoute: '/projects/typing-speed',
     },
     {
         title: "Game Hub",
@@ -92,7 +95,9 @@ export const projectsData = [
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],
         imageUrl: gameHubImage,
         projectUrl: 'https://github.com/Codefreyy/New-Game-hub',
-        demoUrl: 'https://new-game-hub.vercel.app/'
+        demoUrl: 'https://new-game-hub.vercel.app/',
+        detailRoute: '/projects/typing-speed'
+
 
     },
     {
@@ -102,7 +107,9 @@ export const projectsData = [
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: rubicGameImage,
         projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
-        demoUrl: 'https://vanilla-js-game-2048.vercel.app/'
+        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
+        detailRoute: '/projects/typing-speed'
+
     },
 ] as const;
 

@@ -1,10 +1,15 @@
-import Intro from "@/components/Intro"
-import SectionDivider from "@/components/SectionDivider"
-import About from "@/components/About"
-import Projects from "@/components/Projects"
-import Skills from "@/components/Skills"
-import Experience from "@/components/Experience"
+import Intro from "@/components/homepage/Intro"
+import SectionDivider from "@/components/homepage/SectionDivider"
+import About from "@/components/homepage/About"
+import Projects from "@/components/homepage/Projects"
+import Skills from "@/components/homepage/Skills"
+import Experience from "@/components/homepage/Experience"
 // import Contact from "@/components/Contact"
+
+export const metadata = {
+  title: "Joy | Personal Portfolio",
+  description: "Joy is a full-stack developer with 2 years of experience.",
+}
 
 export default function Home() {
   return (
