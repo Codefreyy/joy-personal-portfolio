@@ -8,6 +8,7 @@ import ThemeSwitch from "@/components/ThemeTwich"
 // import { usePathname } from "next/navigation"
 import LanguageSwitch from "@/components/LanguageSwitch"
 import { NextIntlClientProvider, useMessages } from "next-intl"
+import WidgetWrapper from "@/components/WidgetWrapper"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -38,8 +39,10 @@ export default function RootLayout({
 
               {children}
               <Footer />
-              <ThemeSwitch />
-              <LanguageSwitch />
+              <WidgetWrapper>
+                <ThemeSwitch />
+                <LanguageSwitch />
+              </WidgetWrapper>
             </ActionSectionContextProvider>
           </ThemeContextProvider>
         </NextIntlClientProvider>

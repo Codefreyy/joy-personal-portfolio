@@ -8,7 +8,7 @@ export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme()
   return (
     <button
-      className="fixed bottom-8 right-[3rem] w-[2.5rem] h-[2.5rem] bg-opacity-80  flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all"
+      className="w-[2.5rem] h-[2.5rem] bg-opacity-80  flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all"
       onClick={toggleTheme}
     >
       <span className="sr-only">change dark mode</span>
