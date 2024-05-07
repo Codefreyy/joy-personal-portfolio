@@ -12,7 +12,6 @@ function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext()
   const activeLocale = useLocale()
-  console.log(activeLocale)
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -26,7 +25,7 @@ function Header() {
           {links.map((link, index) => (
             <motion.li
               key={link.hash}
-              className="h-3/4 flex items-center justify-center relative"
+              className="h-3/4 flex items-center justify-center relative break-keep"
               initial={{ opacity: 0, y: -100 }}
               animate={{ opacity: 1, y: 0 }}
             >
@@ -34,7 +33,10 @@ function Header() {
                 href={link.hash}
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 no-wrap hover:text-gray-950 dark:hover:text-gray-300 transition",
-                  { "text-gray-950": activeSection === link.name }
+                  {
+                    "text-gray-950": activeSection === link.name,
+                    "dark:hover:text-gray-600": activeSection == link.name,
+                  }
                 )}
                 onClick={() => {
                   setActiveSection(link.name)

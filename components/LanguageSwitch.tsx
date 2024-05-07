@@ -13,7 +13,6 @@ export default function LanguageSwitch() {
     const nextLocale = localActive == "en" ? "zh" : "en"
     const scrollY = window.scrollY
     const scrollX = window.scrollX
-    console.log(scrollY, scrollX, 1233)
 
     const replaceLangInPath = (newLang: string) => {
       const newPath = pathname.replace(/^\/(en|zh)/, `/${newLang}/`)

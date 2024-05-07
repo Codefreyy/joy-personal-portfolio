@@ -13,7 +13,6 @@ export default function Video({
   className?: string
   imageUrl: string
 }) {
-  console.log(url)
   return (
     <div
       className={` group
