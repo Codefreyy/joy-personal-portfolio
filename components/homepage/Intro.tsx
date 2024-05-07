@@ -12,6 +12,7 @@ import { useSectionInView } from "@/lib/hooks"
 import { TypeAnimation } from "react-type-animation"
 import { useActiveSectionContext } from "@/context/action-section-context"
 import { useTranslations } from "next-intl"
+import useSound from "use-sound"
 
 const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "400" })
 
@@ -20,6 +21,8 @@ export default function Intro() {
   const activeLocale = useLocale()
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
   const t = useTranslations("IntroSection")
+  const [playHover] = useSound("/bubble.wav", { volume: 0.5 })
+
   return (
     <section
       ref={ref}
@@ -44,6 +47,10 @@ export default function Intro() {
             />
           </motion.div>
           <motion.span
+            onHoverStart={() => {
+              console.log("sound")
+              playHover()
+            }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.25, rotate: 15 }}
@@ -105,7 +112,7 @@ export default function Intro() {
         {activeLocale === "en" && (
           <p>
             My focus is{" "}
-            <span className="italic">React (Next.js)</span>.
+            <span className="italic font-bold">React (Next.js)</span>.
           </p>
         )}
       </motion.h1>

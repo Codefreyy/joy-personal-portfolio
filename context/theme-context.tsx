@@ -1,6 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useEffect, useState } from "react"
+import useSound from "use-sound"
 
 type ThemeContextType = {
   theme: string
@@ -15,14 +16,18 @@ const ThemeContext = createContext<ThemeContextType | null>(null)
 
 const ThemeContextProvider = ({ children }: ThemeContextProviderProp) => {
   const [theme, setTheme] = useState("light")
+  const [playLight] = useSound("/light-on.mp3", { volume: 0.5 })
+  const [playDark] = useSound("/light-off.mp3", { volume: 0.5 })
 
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark")
+      playDark()
       window.localStorage.setItem("theme", "dark")
       document.documentElement.classList.add("dark")
     } else {
       setTheme("light")
+      playLight()
       window.localStorage.setItem("theme", "light")
       document.documentElement.classList.remove("dark")
     }
