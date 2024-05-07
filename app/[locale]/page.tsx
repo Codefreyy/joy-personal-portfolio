@@ -16,7 +16,7 @@ export default function Home() {
   const isMobile = isMobileDevice()
 
   return (
-    <main className="flex flex-col items-center justify-center px-4 overflow-x-hidden">
+    <main className="flex flex-col items-center justify-center px-4">
       <Intro />
       <SectionDivider />
       <About />

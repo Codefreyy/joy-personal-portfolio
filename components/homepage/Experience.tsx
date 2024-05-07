@@ -91,11 +91,11 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
           ))}
         </VerticalTimeline>
       ) : (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           {experienceDataShown.map((item, index) => (
             <div
               key={index}
-              className={`flex bg-slate-100 border-1 border-opacity-80 rounded-lg p-5 pb-8 flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 `}
+              className={`flex dark:bg-slate-800 dark:text-slate-100 bg-slate-100 border-1 border-opacity-80 rounded-lg p-6 pb-8 flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 `}
             >
               <div className="w-10 h-5 sm:w-24 sm:h-24 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center">
                 {item.icon}
