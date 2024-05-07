@@ -10,7 +10,7 @@ export default function SectionDivider() {
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.25 }}
-      className="text-gray-500 w-8 h-8 mt-28 mb-20 rounded-full hidden sm:block "
+      className="text-gray-500 w-8 h-8 mt-12 mb-20 rounded-full hidden sm:block "
     >
       <Link href="#about">
         <IoIosArrowDown className="transition" />
