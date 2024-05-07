@@ -1,9 +1,8 @@
 {
     "IntroSection": {
-        "hello_im": "Hello, I'm",
-        "name": "Joy",
-        "short_intro": "with 2 years of experience. I enjoy building sites & apps. My focus is ",
-        "focus": "React (Next.js)",
+        "hello_im": "Hi, my name is",
+        "name": "Joy Peng",
+        "short_intro": "I enjoy building things for the web.",
         "download_cv": "Download CV"
     },
     "SectionName": {

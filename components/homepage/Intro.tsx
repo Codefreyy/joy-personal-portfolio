@@ -6,11 +6,14 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs"
 import { HiDownload } from "react-icons/hi"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
+import { Source_Code_Pro } from "next/font/google"
 import { useLocale } from "next-intl"
 import { useSectionInView } from "@/lib/hooks"
 import { TypeAnimation } from "react-type-animation"
 import { useActiveSectionContext } from "@/context/action-section-context"
 import { useTranslations } from "next-intl"
+
+const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "400" })
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.2)
@@ -61,36 +64,50 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">{t("hello_im")}</span>
+        <span className={`${sourceCodePro.className} text-sm tracking-wider `}>
+          {t("hello_im")}
+        </span>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1
-            id="name"
-            className=" text-center  text-3xl  sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold"
-          >
-            <TypeAnimation
-              sequence={[
-                `${t("name")}`,
-                1000,
-                "Frontend Developer",
-                1000,
-                "Full Stack Developer",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+          <h1 className="text-center text-4xl font-bold tracking-tight  sm:text-5xl">
+            {t("name")}
           </h1>
+
+          <div className="text-center">
+            <span
+              className={`${sourceCodePro.className} text-sm tracking-wider`}
+            >
+              I&apos;m a{" "}
+            </span>
+            <h2
+              id="name"
+              className=" text-center  text-2xl  sm:text-5xl lg:text-4xl lg:leading-normal font-extrabold"
+            >
+              <TypeAnimation
+                sequence={[
+                  "Frontend Developer",
+                  1000,
+                  "Full Stack Developer",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </h2>
+          </div>
         </motion.div>
         <p>{t("short_intro")}</p>
-        <span className={`${activeLocale == "en" ? "underline" : "italic"}`}>
-          {t("focus")}
-        </span>
+        {activeLocale === "en" && (
+          <p>
+            My focus is{" "}
+            <span className="italic">React (Next.js)</span>.
+          </p>
+        )}
       </motion.h1>
 
       <motion.div
