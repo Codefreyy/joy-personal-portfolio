@@ -18,7 +18,6 @@ import { ExperienceLabel } from "./ExperienceLabel"
 import { useLocale } from "next-intl"
 
 export default function Experience({ isMobile }: { isMobile: boolean }) {
-  console.log("isMobile", isMobile)
   const { theme } = useTheme()
   const variants = {
     left: {
