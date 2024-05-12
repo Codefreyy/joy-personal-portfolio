@@ -6,8 +6,8 @@ import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
-import { FaLink } from "react-icons/fa"
 import { IoIosArrowForward } from "react-icons/io"
+import { FiExternalLink } from "react-icons/fi"
 import { useLocale } from "next-intl"
 
 type ProjectProps = (typeof projectsData)[number]
@@ -41,25 +41,34 @@ export default function Project({
       }}
       className="group mb-3 sm:mb-8 last:mb-0"
     >
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[25rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
+      <section className="bg-gray-100 max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
-          <div className="flex gap-3 items-center">
+          <div className="flex flex-col gap-3 items-start ">
             {/* <Link href={detailRoute}> */}
             <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
               {activeLocale === "zh" ? title_zh : title}
             </h3>
             {/* </Link> */}
 
-            <Link
-              href={projectUrl}
-              target="_blank"
-              className="hover:scale-[1.25]"
-            >
-              <FaGithubSquare className="w-5 h-5" />
-            </Link>
-            <Link href={demoUrl} target="_blank" className="hover:scale-[1.25]">
-              <FaLink className="w-4 h-4" />
-            </Link>
+            <div className="text-sm text-gray-500">
+              {" "}
+              <Link
+                href={projectUrl}
+                target="_blank"
+                className="hover:scale-[1.05] w-full flex items-center gap-1  hover:text-gray-700 hover:underline"
+              >
+                Code
+                <FaGithubSquare className="w-5 h-5" />
+              </Link>
+              <Link
+                href={demoUrl}
+                target="_blank"
+                className="hover:scale-[1.05] w-full flex items-center gap-1 hover:text-gray-700 hover:underline"
+              >
+                Live demo
+                <FiExternalLink className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
 
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
