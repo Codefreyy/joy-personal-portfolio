@@ -6,7 +6,6 @@ import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { FaGithubSquare } from "react-icons/fa"
 import Link from "next/link"
-import { IoIosArrowForward } from "react-icons/io"
 import { FiExternalLink } from "react-icons/fi"
 import { useLocale } from "next-intl"
 
@@ -50,23 +49,24 @@ export default function Project({
             </h3>
             {/* </Link> */}
 
-            <div className="text-sm text-gray-500">
+            <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">
               {" "}
               <Link
                 href={projectUrl}
                 target="_blank"
-                className="hover:scale-[1.05] w-full flex items-center gap-1  hover:text-gray-700 hover:underline"
+                className="w-full flex items-center gap-1  hover:underline underline-offset-2"
               >
-                Code
+                <span className="break-keep">Code</span>
+
                 <FaGithubSquare className="w-5 h-5" />
               </Link>
               <Link
                 href={demoUrl}
                 target="_blank"
-                className="hover:scale-[1.05] w-full flex items-center gap-1 hover:text-gray-700 hover:underline"
+                className=" w-full flex items-center gap-1 hover:underline underline-offset-2"
               >
-                Live demo
-                <FiExternalLink className="w-4 h-4" />
+                <span className="break-keep min-w-[4.5rem]">Live demo</span>
+                <FiExternalLink className="w-5 h-5 " />
               </Link>
             </div>
           </div>

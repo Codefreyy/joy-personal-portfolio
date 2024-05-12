@@ -122,7 +122,7 @@ export type ProjectTags = typeof projectsData[number]["tags"];
 export const projectsData = [
     {
         title: "Typing Speed",
-        title_zh: '打字测验⌨️',
+        title_zh: '打字测验',
         description:
             "A comprehensive typing speed test application that tracks your overall typing performance. It provides detailed statistics, including total words typed, errors made, and accuracy rate, allowing users to monitor their progress and improve their typing efficiency.",
         desc_zh: "一个打字速度测试应用。敲击即开始打字，计时结束后将显示总敲击单词数、正确率、错误率等。该应用UI简洁现代，支持Dark Mode切换。",
@@ -134,7 +134,7 @@ export const projectsData = [
     },
     {
         title: "Game Hub",
-        title_zh: '游戏枢纽站🎮',
+        title_zh: '游戏枢纽站',
         description: "A responsive game grid application that offers search and filter functionality, and features infinite scrolling using React Query. It also includes robust form validation with Zod and efficient state management with Zustand.",
         desc_zh: "响应式游戏网格，支持搜索和过滤，使用react query实现无限滚动，使用Zod进行表单验证，Zustand进行状态管理。",
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],

@@ -1,9 +1,9 @@
-import Header from "@/components/homepage/Header"
+import Header from "@/components/Header"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import ThemeContextProvider from "@/context/theme-context"
 import { ActionSectionContextProvider } from "@/context/action-section-context"
-import Footer from "@/components/homepage/Footer"
+import Footer from "@/components/Footer"
 import ThemeSwitch from "@/components/ThemeTwich"
 // import { usePathname } from "next/navigation"
 import LanguageSwitch from "@/components/LanguageSwitch"
@@ -34,7 +34,6 @@ export default function RootLayout({
           <ThemeContextProvider>
             <ActionSectionContextProvider>
               <Header />
-
               {children}
               <Footer />
               <WidgetWrapper>
