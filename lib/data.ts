@@ -3,6 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import rubicGameImage from "@/public/2048-game.png";
+import breadditImage from "@/public/breaddit.png";
 import gameHubImage from "@/public/game-hub.png";
 import typingSpeedImage from "@/public/typing-speed.png";
 
@@ -130,7 +131,6 @@ export const projectsData = [
         imageUrl: typingSpeedImage,
         projectUrl: 'https://github.com/Codefreyy/typing-speed-game',
         demoUrl: 'https://joy-typing-speed-game.vercel.app/',
-        detailRoute: '/projects/typing-speed',
     },
     {
         title: "Game Hub",
@@ -141,22 +141,32 @@ export const projectsData = [
         imageUrl: gameHubImage,
         projectUrl: 'https://github.com/Codefreyy/New-Game-hub',
         demoUrl: 'https://new-game-hub.vercel.app/',
-        detailRoute: '/projects/typing-speed'
 
 
     },
-    {
-        title: "2048 Game",
-        title_zh: "2048",
-        description:
-            "Cloned the classic 2048 game using object-oriented programming and vanilla JavaScript.",
-        desc_zh: "使用面向对象编程思维和原生JavaScript实现了经典的2048游戏。",
-        tags: ["JavaScript", "HTML", "CSS3"],
-        imageUrl: rubicGameImage,
-        projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
-        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
-        detailRoute: '/projects/typing-speed'
+    // {
+    //     title: "2048 Game",
+    //     title_zh: "2048",
+    //     description:
+    //         "Cloned the classic 2048 game using object-oriented programming and vanilla JavaScript.",
+    //     desc_zh: "使用面向对象编程思维和原生JavaScript实现了经典的2048游戏。",
+    //     tags: ["JavaScript", "HTML", "CSS3"],
+    //     imageUrl: rubicGameImage,
+    //     projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
+    //     demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
 
+    // },
+    {
+        title: "Breaddit",
+        title_zh: "社交新闻论坛",
+        description:
+            `A modern full-stack Reddit clone features infinite scrolling, secure authentication via NextAuth and Google, and a custom feed for authenticated users. It utilizes Upstash Redis for advanced caching and React-Query for efficient data fetching, ensuring a responsive and user-friendly experience with optimistic updates.
+            `,
+        desc_zh: "一个现代化的全栈Reddit克隆",
+        tags: ["JavaScript", "HTML", "CSS3"],
+        imageUrl: breadditImage,
+        projectUrl: 'https://github.com/Codefreyy/Breaddit',
+        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
     },
 ]
 

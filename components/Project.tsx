@@ -20,7 +20,6 @@ export default function Project({
   imageUrl,
   projectUrl,
   demoUrl,
-  detailRoute,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -43,11 +42,9 @@ export default function Project({
       <section className="bg-gray-100 max-w-[45rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[28rem]  transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 ">
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex flex-col gap-3 items-start ">
-            {/* <Link href={detailRoute}> */}
             <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
               {activeLocale === "zh" ? title_zh : title}
             </h3>
-            {/* </Link> */}
 
             <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">
               {" "}
@@ -84,13 +81,7 @@ export default function Project({
               </li>
             ))}
           </ul>
-          {/* <Link
-            href={detailRoute}
-            className="group flex gap-2 items-center font-medium group-hover:text-pink dark:group-hover:text-yellow hover:underline mt-auto"
-          >
-            See Detail
-            <IoIosArrowForward className="hidden group-hover:block" />
-          </Link> */}
+         
         </div>
 
         <Image
