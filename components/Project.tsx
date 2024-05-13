@@ -57,14 +57,16 @@ export default function Project({
 
                 <FaGithubSquare className="w-5 h-5" />
               </Link>
-              <Link
-                href={demoUrl}
-                target="_blank"
-                className=" w-full flex items-center gap-1 hover:underline underline-offset-2"
-              >
-                <span className="break-keep min-w-[4.5rem]">Live demo</span>
-                <FiExternalLink className="w-5 h-5 " />
-              </Link>
+              {demoUrl && (
+                <Link
+                  href={demoUrl}
+                  target="_blank"
+                  className=" w-full flex items-center gap-1 hover:underline underline-offset-2"
+                >
+                  <span className="break-keep min-w-[4.5rem]">Live demo</span>
+                  <FiExternalLink className="w-5 h-5 " />
+                </Link>
+              )}
             </div>
           </div>
 
@@ -81,7 +83,6 @@ export default function Project({
               </li>
             ))}
           </ul>
-         
         </div>
 
         <Image

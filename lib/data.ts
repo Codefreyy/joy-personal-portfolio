@@ -144,18 +144,6 @@ export const projectsData = [
 
 
     },
-    // {
-    //     title: "2048 Game",
-    //     title_zh: "2048",
-    //     description:
-    //         "Cloned the classic 2048 game using object-oriented programming and vanilla JavaScript.",
-    //     desc_zh: "使用面向对象编程思维和原生JavaScript实现了经典的2048游戏。",
-    //     tags: ["JavaScript", "HTML", "CSS3"],
-    //     imageUrl: rubicGameImage,
-    //     projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
-    //     demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
-
-    // },
     {
         title: "Breaddit",
         title_zh: "社交新闻论坛",
@@ -166,8 +154,21 @@ export const projectsData = [
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: breadditImage,
         projectUrl: 'https://github.com/Codefreyy/Breaddit',
-        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
+        demoUrl: '',
     },
+    {
+        title: "2048 Game",
+        title_zh: "2048",
+        description:
+            "Cloned the classic 2048 game using object-oriented programming and vanilla JavaScript.",
+        desc_zh: "使用面向对象编程思维和原生JavaScript实现了经典的2048游戏。",
+        tags: ["JavaScript", "HTML", "CSS3"],
+        imageUrl: rubicGameImage,
+        projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
+        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
+
+    },
+
 ]
 
 export const skillsData = [
