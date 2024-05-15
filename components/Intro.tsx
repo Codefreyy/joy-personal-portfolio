@@ -17,7 +17,7 @@ import useSound from "use-sound"
 const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "400" })
 
 export default function Intro() {
-  const { ref } = useSectionInView("Home", 0.2)
+  const { ref } = useSectionInView("Home")
   const activeLocale = useLocale()
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext()
   const t = useTranslations("IntroSection")

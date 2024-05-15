@@ -8,7 +8,7 @@ import Project from "./Project"
 import { useLocale } from "next-intl"
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.5)
+  const { ref } = useSectionInView("Projects", 0.1)
   const activeLocale = useLocale()
 
   return (

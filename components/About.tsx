@@ -54,7 +54,8 @@ export default function About() {
             confirmed that this is the career path I want to pursue. I am
             currently studying for an
             <span className="font-medium italic">
-            {" "}  MSc in Computing and IT
+              {" "}
+              MSc in Computing and IT
             </span>{" "}
             at the{" "}
             <span className="italic underline">
