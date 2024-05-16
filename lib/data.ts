@@ -25,7 +25,7 @@ export const links = [
         hash: "#skills",
     },
     {
-        name: "Experience",
+        name: "Experiences",
         hash: "#experience",
     },
     // {
@@ -40,7 +40,7 @@ export const headerLanguageMap = {
     About: '关于我',
     Projects: '我的项目',
     Skills: '我的技能',
-    Experience: '我的经历',
+    Experiences: '我的经历',
 }
 
 export const experiencesData = [
@@ -156,18 +156,7 @@ export const projectsData = [
         projectUrl: 'https://github.com/Codefreyy/Breaddit',
         demoUrl: '',
     },
-    {
-        title: "2048 Game",
-        title_zh: "2048",
-        description:
-            "Cloned the classic 2048 game using object-oriented programming and vanilla JavaScript.",
-        desc_zh: "使用面向对象编程思维和原生JavaScript实现了经典的2048游戏。",
-        tags: ["JavaScript", "HTML", "CSS3"],
-        imageUrl: rubicGameImage,
-        projectUrl: 'https://github.com/Codefreyy/VanillaJS-Game-2048',
-        demoUrl: 'https://vanilla-js-game-2048.vercel.app/',
 
-    },
 
 ]
 

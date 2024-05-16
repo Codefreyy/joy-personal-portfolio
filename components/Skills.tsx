@@ -34,7 +34,7 @@ export default function Skills() {
         {" "}
         {activeLocale === "zh"
           ? headerLanguageMap["Skills"]
-          : "My Skill"}
+          : "My Skills"}
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
