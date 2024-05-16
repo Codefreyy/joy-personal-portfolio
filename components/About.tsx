@@ -27,45 +27,61 @@ export default function About() {
       ) : (
         <>
           <p className="mb-3">
-            After completing my undergraduate degree in{" "}
-            <span className="font-medium italic">Digital Publishing</span> at
-            the{" "}
+            My journey into programming kicked off during my undergrad in
+            <span className="font-medium italic">
+              {" "}
+              Digital Publishing
+            </span> at {}
             <span className="italic underline">
               <a
                 href="https://en.wikipedia.org/wiki/Wuhan_University"
                 target="_blank"
               >
-                Wuhan University
+                Wuhan University.
               </a>
+            </span>{" "}
+            As a freshman, I got my feet wet with the basics of computer
+            science, databases, and Python. But what truly sparked my passion
+            was a course on semantic publishing—there, I used HTML and CSS to
+            create a webpage dedicated to my favorite figure skater, {" "}
+            <a
+              href="https://en.wikipedia.org/wiki/Yuzuru_Hanyu"
+              target="_blank"
+              className="italic underline"
+            >
+              Yuzuru Hanyu.{" "}
+            </a>
+            This experience opened my eyes to the charm of web development———
+            <span className="font-medium italic">
+              literally, you can build anything you envision with code.
             </span>
-            , I found a strong interest in programming. The journey started with
-            basic courses in computer science, databases and HTML/CSS, which
-            naturally led me to{" "}
-            <span className="font-medium italic">front-end development</span>.
           </p>
 
           <p className="mb-3">
-            Internships at Wuhan University&apos;s Big Data Institute and{" "}
+            I sharpened my front-end development skills through internships at
+            Internships at Wuhan University&apos;s Big Data Institute and later
+            at{" "}
             <span className="italic underline">
               <a href="https://www.nio.com/careers" target="_blank">
+                {" "}
                 NIO Inc.
               </a>
             </span>{" "}
-            confirmed that this is the career path I want to pursue. I am
-            currently studying for an
-            <span className="font-medium italic">
-              {" "}
-              MSc in Computing and IT
-            </span>{" "}
-            at the{" "}
-            <span className="italic underline">
-              <a href="https://www.st-andrews.ac.uk/" target="_blank">
-                University of St Andrews.
-              </a>
-            </span>
+            Working closely with developers, designers, testers, and product
+            managers, I loved the buzz of a team pulling together to make our
+            product better. And there’s nothing quite like the thrill of seeing
+            my own code being used by thousands—it’s what solidified my decision
+            to pursue a career in front-end development.
           </p>
 
           <p className="mb-3">
+            I’m now doing my Masters in
+            <span className="font-medium italic"> Computing and IT</span> at the{" "}
+            <span className="italic underline">
+              <a href="https://www.st-andrews.ac.uk/" target="_blank">
+                University of St Andrews.{" "}
+              </a>
+            </span>
             I thrive on programming challenges and enjoy working with teams to
             solve complex problems. I specialize in technologies such as
             <span className="font-medium italic"> React, Next.js and Vue</span>,
@@ -77,15 +93,15 @@ export default function About() {
           </p>
 
           <p>
-            In my spare time, I like to learn new skills and work on interesting
-            projects 🛠️. I also run my own accounts on social media like
-            Bilibili and Xiaohongshu to share technical knowledge and learning
-            resources. If I&apos;m not at the computer, I enjoy
+            In my spare time, I enjoy exploring new technologies and building
+            interesting projects. I also run my social media accounts on
+            platforms like Bilibili and Xiaohongshu, where I share tech tips and
+            tricks. And when I’m not at the computer, you’ll find me
             <span className="font-medium italic">
               {" "}
-              cooking, watching movies and working out.
+              cooking up a storm, catching a movie, or keeping fit with regular
+              workouts.
             </span>
-            Regular exercise, sleep and diet are my secrets to my energy.
           </p>
         </>
       )}
