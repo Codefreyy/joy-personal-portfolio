@@ -145,7 +145,7 @@ export const projectsData = [
 
     },
     {
-        title: "Breaddit",
+        title: "Breddit",
         title_zh: "社交新闻论坛",
         description:
             `A modern full-stack Reddit clone features infinite scrolling, secure authentication via NextAuth and Google, and a custom feed for authenticated users. It utilizes Upstash Redis for advanced caching and React-Query for efficient data fetching, ensuring a responsive and user-friendly experience with optimistic updates.
@@ -153,8 +153,8 @@ export const projectsData = [
         desc_zh: "一个现代化的全栈Reddit克隆",
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: breadditImage,
-        projectUrl: 'https://github.com/Codefreyy/Breaddit',
-        demoUrl: '',
+        projectUrl: 'https://github.com/Codefreyy/Breddit',
+        demoUrl: 'https://joy-breddit.vercel.app/',
     },
 
 
