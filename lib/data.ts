@@ -130,7 +130,7 @@ export const projectsData = [
         tags: ["React", "TypeScript", "Tailwind", 'Framer Motion'],
         imageUrl: typingSpeedImage,
         projectUrl: 'https://github.com/Codefreyy/typing-speed-game',
-        demoUrl: 'https://joy-typing-speed-game.vercel.app/',
+        demoUrl: 'https://joy-typing-speed.netlify.app/',
     },
     {
         title: "Game Hub",
@@ -140,7 +140,7 @@ export const projectsData = [
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],
         imageUrl: gameHubImage,
         projectUrl: 'https://github.com/Codefreyy/New-Game-hub',
-        demoUrl: 'https://new-game-hub.vercel.app/',
+        demoUrl: 'https://joy-gamehub.netlify.app/',
 
 
     },
@@ -154,7 +154,7 @@ export const projectsData = [
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: breadditImage,
         projectUrl: 'https://github.com/Codefreyy/Breddit',
-        demoUrl: 'https://joy-breddit.vercel.app/',
+        demoUrl: 'https://joy-breaddit-reddit-clone.netlify.app/',
     },
 
 
