@@ -89,7 +89,7 @@ export const experiencesData = [
 export const experiencesDataZn = [
     {
         "title": "计算机与信息技术硕士",
-        "location": "英国圣安德鲁斯大学(qs前100 英国前3)",
+        "location": "英国圣安德鲁斯大学",
         "description": "获得了计算机与信息技术硕士学位，在人机交互、计算机通信系统和信息安全等领域深入学习。培养了计算思维、以用户为中心的设计和数据可视化方面的强大能力，为在科技驱动的环境中有效应用做好了准备。",
         icon: React.createElement(LuGraduationCap),
         "date": "2023年9月 - 2024年8月"
