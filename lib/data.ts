@@ -136,7 +136,7 @@ export const projectsData = [
         title: "Game Hub",
         title_zh: '游戏枢纽站',
         description: "A responsive game grid application that offers search and filter functionality, and features infinite scrolling using React Query. It also includes robust form validation with Zod and efficient state management with Zustand.",
-        desc_zh: "响应式游戏网格，支持搜索和过滤，使用react query实现无限滚动，使用Zod进行表单验证，Zustand进行状态管理。",
+        desc_zh: "使用React.js、TypeScript和ChakraUI构建的游戏聚合器。项目功能包括响应式游戏网格、搜索和过滤、使用React Query进行数据处理、使用Zod进行表单验证、使用Zustand进行状态管理、React Router进行导航以及实现无限滚动。",
         tags: ["React", "TypeScript", "Zod", "React Query", "Chakra UI"],
         imageUrl: gameHubImage,
         projectUrl: 'https://github.com/Codefreyy/New-Game-hub',
@@ -150,7 +150,7 @@ export const projectsData = [
         description:
             `A modern full-stack Reddit clone features infinite scrolling, secure authentication via NextAuth and Google, and a custom feed for authenticated users. It utilizes Upstash Redis for advanced caching and React-Query for efficient data fetching, ensuring a responsive and user-friendly experience with optimistic updates.
             `,
-        desc_zh: "一个现代化的全栈Reddit克隆",
+        desc_zh: "一个现代且简洁的Reddit克隆项目，使用Next.js、TypeScript和Tailwind CSS构建。项目功能包括无限滚动动态加载帖子、NextAuth与Google认证、为认证用户提供自定义Feed、高级缓存、乐观更新、React-Query数据获取、美观的帖子编辑器、图片上传和链接预览、以及完整的评论功能。",
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: breadditImage,
         projectUrl: 'https://github.com/Codefreyy/Breddit',
