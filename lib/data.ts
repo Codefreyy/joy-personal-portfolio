@@ -154,7 +154,7 @@ export const projectsData = [
         tags: ["JavaScript", "HTML", "CSS3"],
         imageUrl: breadditImage,
         projectUrl: 'https://github.com/Codefreyy/Breddit',
-        demoUrl: 'https://joy-breaddit-reddit-clone.netlify.app/',
+        demoUrl: 'https://joy-breddit.vercel.app/',
     },
 
 
