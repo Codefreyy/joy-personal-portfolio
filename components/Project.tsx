@@ -43,7 +43,9 @@ export default function Project({
         <div className="group pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col items-start gap-3 h-full sm:group-even:ml-[18rem]">
           <div className="flex flex-col gap-3 items-start ">
             <h3 className="text-2xl font-semibold group-hover:text-pink dark:group-hover:text-yellow hover:underline">
-              {activeLocale === "zh" ? title_zh : title}
+              <Link href={demoUrl} target="_blank">
+                {activeLocale === "zh" ? title_zh : title}
+              </Link>
             </h3>
 
             <div className="flex gap-3 text-sm text-gray-500 dark:text-gray-300">

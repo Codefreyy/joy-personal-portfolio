@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact } from "react-icons/fa";
 import { FaVuejs } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import rubicGameImage from "@/public/2048-game.png";
+import knowledgeSharingPlatformImage from '@/public/knowledge-sharing-platform.png';
 import breadditImage from "@/public/breaddit.png";
 import gameHubImage from "@/public/game-hub.png";
 import typingSpeedImage from "@/public/typing-speed.png";
@@ -90,14 +90,14 @@ export const experiencesDataZn = [
     {
         "title": "计算机与信息技术硕士",
         "location": "英国圣安德鲁斯大学",
-        "description": "获得了计算机与信息技术硕士学位，在人机交互、计算机通信系统和信息安全等领域深入学习。培养了计算思维、以用户为中心的设计和数据可视化方面的强大能力，为在科技驱动的环境中有效应用做好了准备。",
+        "description": "在人机交互、计算机通信系统和信息安全等领域深入学习。培养了计算思维、以用户为中心的设计和数据可视化方面的强大能力，预计以一等学位毕业（GPA17/20）。",
         icon: React.createElement(LuGraduationCap),
-        "date": "2023年9月 - 2024年8月"
+        "date": "2023年9月 - 2024年12月"
     },
     {
         "title": "前端实习生",
         "location": "蔚来汽车（中国武汉）",
-        "description": "使用Vue3、TypeScript和百度地图API开发蔚来第三代换电站列表和详情页。在任务向导页面实施基于角色的访问控制，增强系统安全性。在Jira管理的环境中有效协作，利用Jenkins进行部署流程。",
+        "description": `参与团队多个平台的迭代开发，独立完成内部告警平台的值班表页面开发。协助开发蔚来第三代场站列表与详情页，集成百度地图 API 实现定位与选点功能。优化任务魔棒页面，新增管理员角色，重构权限管理逻辑，用头像列表展示管理员，并整合飞书 API 实现消息发送。自定义 Element-UI 级联选择组件，解决全选德国 2000+ 城市时浏览器卡死问题，通过懒加载优化显著提升性能。遵循 Agile/Scrum 开发流程，进行两周一迭代，通过 Jira 跟进项目需求，设计技术方案，并与测试、后端、产品及 设计团队密切对接。`,
         "icon": React.createElement(FaVuejs),
         "date": "2022年8月 - 2022年12月"
     },
@@ -106,7 +106,7 @@ export const experiencesDataZn = [
         "location": "武汉大学大数据研究院",
         "description": "使用umi（React框架）和Ant Design Pro开发和维护Finknow，一个金融知识图谱查询和分析平台。利用基于G6的React图分析工具包graphin开发了股权网络穿透图，增强了数据可视化功能。",
         "icon": React.createElement(FaReact),
-        "date": "2022年5月 - 2022年7月"
+        "date": "2022年5月 - 2022年8月"
     },
     {
         "title": "数字出版学士",
@@ -121,6 +121,17 @@ export const experiencesDataZn = [
 export type ProjectTags = typeof projectsData[number]["tags"];
 
 export const projectsData = [
+    {
+        "title": "Ethical Digital Nation Collaborative Platform",
+        "title_zh": "数字道德国家协作平台",
+        "description":
+            "A collaborative platform enhancing cooperation among Scottish higher education institutions in digital ethics. Features include OAuth integration, RSS feed for digital news, a comprehensive event management system with advanced rating and commenting, and a responsive, accessible design.",
+        "desc_zh": "旨在促进苏格兰高校在数字道德领域合作的协作平台。该平台集成用户访谈、工作坊、OAuth登录、最新数字博客RSS feed显示、完备的事件管理系统（包含高级评分与评论功能）以及注重可访问性的响应式设计。",
+        "tags": ["React", "Next.js 14", "TypeScript", "TailwindCSS", "Convex", "Clerk"],
+        "imageUrl": knowledgeSharingPlatformImage,
+        "projectUrl": "https://github.com/Codefreyy/Ethical-Digital-Nation",
+        "demoUrl": "https://yujie-ethical-digital-nation.netlify.app/"
+    },
     {
         title: "Typing Speed",
         title_zh: '打字测验',
