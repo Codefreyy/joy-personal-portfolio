@@ -136,18 +136,20 @@ export default function Intro() {
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link> */}
-        <a
-          href={
-            activeLocale == "en" ? "/Joy-fullstack.pdf" : "/前端开发-彭郁洁.pdf"
-          }
-          download={true}
-          className=" bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
 
-          // className="group text-sm  px-4 py-2  bg-white sm:text-lg sm:px-7 sm:py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+        <Link
+          target="_blank"
+          className="bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href={
+            activeLocale == "en"
+              ? "/joy-fullstack-resume.pdf"
+              : "/前端开发-彭郁洁.pdf"
+          }
+          locale={false}
         >
           {t("download_cv")}
           <HiDownload />
-        </a>
+        </Link>
         <a
           className="bg-white p-3 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/joy-yujiepeng/"
