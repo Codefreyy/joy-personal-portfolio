@@ -37,15 +37,7 @@ export default function About() {
           </div>
 
           <div>
-            目前，我在准备2025年秋招。同时在自己的
-            <a
-              className="underline"
-              href="https://www.xiaohongshu.com/user/profile/5f603fb10000000001000c91?xhsshare=CopyLink&appuid=5f603fb10000000001000c91&apptime=1719567055"
-              target="_blank"
-            >
-              小红书
-            </a>
-            、
+            目前，我在准备2025年秋招。同时在自己的 小红书 、
             <a
               className="underline"
               href="https://blog-joy-peng.netlify.app/"
@@ -53,15 +45,7 @@ export default function About() {
             >
               个人博客
             </a>
-            和
-            <a
-              className="underline"
-              href="https://space.bilibili.com/12324398"
-              target="_blank"
-            >
-              b站
-            </a>
-            记录技术和生活。
+            和 b站 记录技术和生活。
           </div>
         </div>
       ) : (
