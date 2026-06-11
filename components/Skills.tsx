@@ -1,11 +1,12 @@
 "use client"
 
 import React from "react"
-import { headerLanguageMap, skillsData } from "@/lib/data"
+import { skillsData } from "@/lib/data"
 import { useSectionInView } from "@/lib/hooks"
 import { motion } from "framer-motion"
 import SectionHeading from "./SectionHeading"
 import { useLocale } from "next-intl"
+import { getLocalizedHeading } from "@/lib/locale"
 
 const fadeInAnimationVariants = {
   initial: {
@@ -31,10 +32,7 @@ export default function Skills() {
       className=" max-w-[53rem] scroll-mt-28 text-center mb-28"
     >
       <SectionHeading>
-        {" "}
-        {activeLocale === "zh"
-          ? headerLanguageMap["Skills"]
-          : "My Skills"}
+        {getLocalizedHeading(activeLocale, "Skills", "My Skills")}
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (

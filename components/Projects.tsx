@@ -1,11 +1,12 @@
 "use client"
 
 import React from "react"
-import { headerLanguageMap, projectsData } from "@/lib/data"
+import { projectsData } from "@/lib/data"
 import { useSectionInView } from "@/lib/hooks"
 import SectionHeading from "./SectionHeading"
 import Project from "./Project"
 import { useLocale } from "next-intl"
+import { getLocalizedHeading } from "@/lib/locale"
 import Link from "next/link"
 import { FaAngleRight } from "react-icons/fa6"
 
@@ -16,10 +17,7 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>
-        {" "}
-        {activeLocale === "zh"
-          ? headerLanguageMap["Projects"]
-          : "Featured Projects"}
+        {getLocalizedHeading(activeLocale, "Projects", "Featured Projects")}
       </SectionHeading>
       <div>
         {projectsData.map((project, index) => (
