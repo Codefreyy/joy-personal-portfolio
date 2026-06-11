@@ -48,7 +48,6 @@ export default function Intro() {
           </motion.div>
           <motion.span
             onHoverStart={() => {
-              console.log("sound")
               playHover()
             }}
             initial={{ scale: 0 }}
