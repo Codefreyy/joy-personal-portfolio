@@ -4,6 +4,7 @@ import React from "react"
 import { motion } from "framer-motion"
 import SectionHeading from "./SectionHeading"
 import { useSectionInView } from "@/lib/hooks"
+import { fadeInUpProps } from "@/lib/animations"
 import { useLocale, useTranslations } from "next-intl"
 
 export default function About() {
@@ -16,8 +17,7 @@ export default function About() {
     <motion.section
       ref={ref}
       className="mb-50 max-w-[45rem] text-start leading-8 sm:mb-40 scroll-mt-28 mb-28 "
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
+      {...fadeInUpProps}
       transition={{ delay: 0.175 }}
       id="about"
     >

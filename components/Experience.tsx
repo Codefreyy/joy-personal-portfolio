@@ -9,13 +9,29 @@ import "react-vertical-timeline-component/style.min.css"
 import {
   experiencesData,
   experiencesDataZn,
-  headerLanguageMap,
 } from "@/lib/data"
+import { getLocalizedHeading } from "@/lib/locale"
 import SectionHeading from "./SectionHeading"
 import { motion } from "framer-motion"
 import { useTheme } from "@/context/theme-context"
 import { ExperienceLabel } from "./ExperienceLabel"
 import { useLocale } from "next-intl"
+
+function ExperienceItemContent({
+  item,
+}: {
+  item: { title: string; location: string | React.ReactNode; description: string }
+}) {
+  return (
+    <>
+      <h3 className="font-bold capitalize">{item.title}</h3>
+      <p className="font-normal !mt-0">{item.location}</p>
+      <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+        {item.description}
+      </p>
+    </>
+  )
+}
 
 export default function Experience({ isMobile }: { isMobile: boolean }) {
   const { theme } = useTheme()
@@ -39,10 +55,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
     <section className="sm:mb-40 relative mb-20">
       <ExperienceLabel />
       <SectionHeading>
-        {" "}
-        {activeLocale === "zh"
-          ? headerLanguageMap["Experiences"]
-          : "My Experiences"}
+        {getLocalizedHeading(activeLocale, "Experiences", "My Experiences")}
       </SectionHeading>
       {!isMobile ? (
         <VerticalTimeline lineColor={theme == "light" ? "#e9e9ea" : "#3b3d4f"}>
@@ -80,11 +93,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
                   fontSize: "1.5rem",
                 }}
               >
-                <h3 className="font-bold capitalize">{item.title}</h3>
-                <p className="font-normal !mt-0">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                  {item.description}
-                </p>
+                <ExperienceItemContent item={item} />
               </VerticalTimelineElement>
             </motion.div>
           ))}
@@ -101,11 +110,7 @@ export default function Experience({ isMobile }: { isMobile: boolean }) {
               </div>
               {item.date}
               <div className="flex flex-col gap-2">
-                <h3 className="font-bold capitalize">{item.title}</h3>
-                <p className="font-normal !mt-0">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                  {item.description}
-                </p>
+                <ExperienceItemContent item={item} />
               </div>
             </div>
           ))}

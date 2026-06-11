@@ -13,6 +13,9 @@ import { TypeAnimation } from "react-type-animation"
 import { useActiveSectionContext } from "@/context/action-section-context"
 import { useTranslations } from "next-intl"
 import useSound from "use-sound"
+import clsx from "clsx"
+import { socialLinkBase } from "@/lib/styles"
+import { fadeInUpProps } from "@/lib/animations"
 
 const sourceCodePro = Source_Code_Pro({ subsets: ["latin"], weight: "400" })
 
@@ -68,8 +71,7 @@ export default function Intro() {
       </div>
       <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        {...fadeInUpProps}
       >
         <span className={`${sourceCodePro.className} text-sm tracking-wider `}>
           {t("hello_im")}
@@ -119,8 +121,7 @@ export default function Intro() {
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center  gap-3 px-4 text-lg font-medium"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        {...fadeInUpProps}
         transition={{
           delay: 0.1,
         }}
@@ -139,7 +140,7 @@ export default function Intro() {
 
         <Link
           target="_blank"
-          className="bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className={clsx(socialLinkBase, "py-2 px-3 text-sm")}
           href={
             activeLocale == "en"
               ? "/joy-fullstack-resume.pdf"
@@ -151,7 +152,7 @@ export default function Intro() {
           <HiDownload />
         </Link>
         <a
-          className="bg-white p-3 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className={clsx(socialLinkBase, "p-3")}
           href="https://www.linkedin.com/in/joy-yujiepeng/"
           target="_blank"
         >
@@ -159,20 +160,18 @@ export default function Intro() {
         </a>
 
         <a
-          className="bg-white p-3 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className={clsx(socialLinkBase, "p-3 text-[1.35rem]")}
           href="https://github.com/Codefreyy"
           target="_blank"
         >
           <FaGithubSquare />
         </a>
         <a
-          className=" bg-white py-2 px-3 text-sm text-gray-700 flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className={clsx(socialLinkBase, "py-2 px-3 text-sm")}
           href="https://blog-joy-peng.netlify.app"
           target="_blank"
         >
           {t("blog")}
-
-          {/* <FaGithubSquare /> */}
         </a>
       </motion.div>
     </section>
