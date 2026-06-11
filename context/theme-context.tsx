@@ -23,28 +23,40 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProp) => {
     if (theme === "light") {
       setTheme("dark")
       playDark()
-      window.localStorage.setItem("theme", "dark")
+      try {
+        window.localStorage.setItem("theme", "dark")
+      } catch {
+        // localStorage may be unavailable (e.g. incognito Safari)
+      }
       document.documentElement.classList.add("dark")
     } else {
       setTheme("light")
       playLight()
-      window.localStorage.setItem("theme", "light")
+      try {
+        window.localStorage.setItem("theme", "light")
+      } catch {
+        // localStorage may be unavailable
+      }
       document.documentElement.classList.remove("dark")
     }
   }
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme")
-    if (localTheme) {
-      setTheme(localTheme)
-      if (localTheme === "dark") {
+    try {
+      const localTheme = window.localStorage.getItem("theme")
+      if (localTheme) {
+        setTheme(localTheme)
+        if (localTheme === "dark") {
+          document.documentElement.classList.add("dark")
+        } else {
+          document.documentElement.classList.remove("dark")
+        }
+      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark")
         document.documentElement.classList.add("dark")
-      } else {
-        document.documentElement.classList.remove("dark")
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark")
-      document.documentElement.classList.add("dark")
+    } catch {
+      // localStorage or matchMedia unavailable; fall back to default "light" theme
     }
   }, [theme])
 
