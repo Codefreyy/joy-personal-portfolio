@@ -42,6 +42,7 @@ export default function About() {
               className="underline"
               href="https://blog-joy-peng.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               个人博客
             </a>
@@ -60,6 +61,7 @@ export default function About() {
               <a
                 href="https://en.wikipedia.org/wiki/Wuhan_University"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Wuhan University.
               </a>
@@ -71,6 +73,7 @@ export default function About() {
             <a
               href="https://en.wikipedia.org/wiki/Yuzuru_Hanyu"
               target="_blank"
+              rel="noopener noreferrer"
               className="italic underline"
             >
               Yuzuru Hanyu.{" "}
@@ -86,7 +89,7 @@ export default function About() {
             Internships at Wuhan University&apos;s Big Data Institute and later
             at{" "}
             <span className="italic underline">
-              <a href="https://www.nio.com/careers" target="_blank">
+              <a href="https://www.nio.com/careers" target="_blank" rel="noopener noreferrer">
                 {" "}
                 NIO Inc.
               </a>
@@ -102,7 +105,7 @@ export default function About() {
             I’m now doing my Masters in
             <span className="font-medium italic"> Computing and IT</span> at the{" "}
             <span className="italic underline">
-              <a href="https://www.st-andrews.ac.uk/" target="_blank">
+              <a href="https://www.st-andrews.ac.uk/" target="_blank" rel="noopener noreferrer">
                 University of St Andrews.{" "}
               </a>
             </span>
